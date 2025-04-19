@@ -1,6 +1,7 @@
-import { Pin, Volume2 } from "lucide-react";
+import { Pin } from "lucide-react";
 import Image from "next/image";
 import { playlists } from "~/lib/dummy";
+import { CurrentPlaying } from "./current-playing";
 
 export const Playlists = () => {
   return (
@@ -8,7 +9,12 @@ export const Playlists = () => {
       {playlists.map((playlist, index) => (
         <div key={index} className="item-center relative flex gap-x-3">
           <div className="relative h-12 w-12 overflow-hidden rounded-[4px]">
-            <Image src={playlist.image} alt="playlist" fill />
+            <Image
+              src={playlist.image}
+              alt="playlist"
+              fill
+              className="object-cover"
+            />
           </div>
 
           <div className="flex flex-col gap-y-1 text-sm">
@@ -23,11 +29,7 @@ export const Playlists = () => {
             </div>
           </div>
 
-          {playlist.nowPlaying && (
-            <div className="absolute top-2 right-2">
-              <Volume2 className="fill-primary stroke-primary h-4 w-4" />
-            </div>
-          )}
+          {playlist.toBePlayed && <CurrentPlaying />}
         </div>
       ))}
     </div>
