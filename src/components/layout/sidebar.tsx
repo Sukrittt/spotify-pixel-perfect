@@ -3,7 +3,7 @@ import { Playlists } from "../sidebar/playlists";
 
 export const Sidebar = () => {
   return (
-    <div className="flex flex-col gap-y-4 rounded-[10px] bg-[#121212] p-[12px] px-5">
+    <div className="flex flex-col gap-y-4 rounded-[10px] bg-[#121212] px-5 py-[12px]">
       <div className="flex items-center justify-between">
         <p>Your Library</p>
 
