@@ -1,9 +1,10 @@
 import "~/styles/globals.css";
+import localFont from "next/font/local";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import { Navbar } from "~/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -11,18 +12,25 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
+const font = localFont({
+  src: "../../public/fonts/Spotify Mix Regular.ttf",
+  variable: "--font-circular-light",
 });
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html
+      lang="en"
+      className={`${font.variable} font-circular-light font-sans`}
+    >
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <Navbar />
+
+          {children}
+        </TRPCReactProvider>
       </body>
     </html>
   );
