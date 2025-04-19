@@ -72,3 +72,31 @@ export const playlists = [
     addInfo: "Spotify",
   },
 ];
+
+export const recommendations = [
+  {
+    image:
+      "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/daily/1/ab6761610000e5eb478a1b262658935c8f5bc57b/en",
+    description: "Eternxlkz, -Prey, LXNGVX and more",
+  },
+  {
+    image:
+      "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/daily/2/ab6761610000e5ebf8349dfb619a7f842242de77/en",
+    description: "Maroon 5, Taylor Swift, Ariana Grande and...",
+  },
+  {
+    image:
+      "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/daily/3/ab6761610000e5eb4293385d324db8558179afd9/en",
+    description: "Drake, Kendrick Lamar, Kanye West and more",
+  },
+  {
+    image:
+      "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/daily/4/ab6761610000e5eb7cea2dcc8fecc2a37659fa2b/en",
+    description: "Hensonn, CYPARISS, isxx and more",
+  },
+  {
+    image:
+      "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/daily/5/ab6761610000e5eb12e150ccd4c284062661cc71/en-GB",
+    description: "HAYASA G, Davuiside, relaiXX and more",
+  },
+];

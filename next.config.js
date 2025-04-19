@@ -33,6 +33,11 @@ const config = {
         hostname: "image-cdn-fa.spotifycdn.com",
         pathname: "**/**",
       },
+      {
+        protocol: "https",
+        hostname: "pickasso.spotifycdn.com",
+        pathname: "**/**",
+      },
     ],
   },
 };

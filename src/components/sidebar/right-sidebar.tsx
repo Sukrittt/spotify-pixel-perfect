@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const RightSidebar = () => {
   return (
-    <div className="flex flex-col gap-y-4 bg-[#121212] px-6 py-4">
+    <div className="flex h-screen flex-col gap-y-4 overflow-y-auto bg-[#121212] px-6 py-4">
       <h3 className="tracking-tight">MATUSHKA ULTRAFUNK</h3>
 
       <div className="relative h-[325px] overflow-hidden rounded-[4px]">
@@ -61,7 +61,7 @@ export const RightSidebar = () => {
       <div className="relative flex flex-col gap-y-4 overflow-hidden rounded-[10px] bg-[#202020] p-4">
         <div className="flex items-center justify-between text-sm">
           <p className="font-bold">Credits</p>
-          <p className="cursor-pointer text-[13px] text-[#C6C5C5] hover:scale-105 hover:text-white hover:underline">
+          <p className="cursor-pointer text-[13px] text-[#C6C5C5] transition hover:scale-105 hover:text-white hover:underline">
             Show All
           </p>
         </div>
