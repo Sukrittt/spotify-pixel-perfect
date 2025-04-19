@@ -5,6 +5,7 @@ import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { Navbar } from "~/components/layout/navbar";
+import { Sidebar } from "~/components/layout/sidebar";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -29,7 +30,13 @@ export default function RootLayout({
         <TRPCReactProvider>
           <Navbar />
 
-          {children}
+          <div className="grid grid-cols-4 gap-2 p-2 pt-0">
+            <Sidebar />
+
+            <div className="col-span-2">{children}</div>
+
+            <div>Right sidebar</div>
+          </div>
         </TRPCReactProvider>
       </body>
     </html>
