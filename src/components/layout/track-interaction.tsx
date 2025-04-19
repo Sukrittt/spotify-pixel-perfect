@@ -32,7 +32,7 @@ export const TrackInteraction = () => {
 
   const { handleFireConfetti } = useSideCannons();
 
-  const [, { sound }] = useSound(music, {
+  const [play, { sound }] = useSound(music, {
     format: ["mp3"],
   });
 
@@ -85,7 +85,11 @@ export const TrackInteraction = () => {
   }, [sound, handleFireConfetti, setPlaying]);
 
   const handlePlaySound = () => {
-    sound.play();
+    if (sound) {
+      sound.play();
+    } else {
+      play();
+    }
     setPlaying(true);
   };
 
