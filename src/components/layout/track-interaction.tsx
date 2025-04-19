@@ -21,7 +21,7 @@ import { useSideCannons } from "../home/confetti";
 import { useAtom } from "jotai";
 import { playingAtom } from "~/atom";
 
-const music = "/song.mp3";
+const music = "/song.MP3";
 const totalSeconds = 211;
 
 export const TrackInteraction = () => {
@@ -32,7 +32,7 @@ export const TrackInteraction = () => {
 
   const { handleFireConfetti } = useSideCannons();
 
-  const [play, { sound }] = useSound(music, {
+  const [play, { sound, pause }] = useSound(music, {
     format: ["mp3"],
   });
 
@@ -94,7 +94,11 @@ export const TrackInteraction = () => {
   };
 
   const handlePauseSound = () => {
-    sound.pause();
+    if (sound) {
+      sound.pause();
+    } else {
+      pause();
+    }
     setPlaying(false);
   };
 

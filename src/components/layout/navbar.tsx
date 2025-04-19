@@ -14,7 +14,7 @@ export const Navbar = () => {
           href="/"
           className="flex h-12 w-14 items-center justify-center rounded-full bg-[#202020] transition hover:scale-105"
         >
-          <Image src="/home2-new.png" alt="home" width={26} height={26} />
+          <Image src="/Home2-new.png" alt="home" width={26} height={26} />
         </Link>
 
         <Search />
